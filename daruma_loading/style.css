@@ -1,0 +1,220 @@
+#container {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: royalblue;
+    overflow: hidden;
+}
+
+/*顔ブロックの設定*/
+#face{
+    position: absolute;
+    top: 100px;
+    width: 100px;
+    height: 90px;
+    left: calc(50% - 50px);
+    border: 5px solid #eee;
+    border-radius: 20px;
+    box-sizing: border-box;
+    animation: face_animation 3s linear forwards infinite;
+}
+
+/*目の設定*/
+#face > .eye{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 5px solid #eee;
+}
+
+.block > .eye{
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    background: #eee;
+}
+
+.eye:nth-child(1){
+    top: 30px;
+    left: calc(50% - 20px);
+}
+.eye:nth-child(2){
+    top: 30px;
+    right: calc(50% - 20px);
+}
+
+/*体ブロックの設定*/
+.block{
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    left: calc(50% - 50px);
+    border: 5px solid #eee;
+    /*border-radius: 20px;*/
+    box-sizing: border-box;
+    /*display: none;*/
+}
+
+/*体ブロック1の設定*/
+.block:nth-child(2){
+    top: 190px;
+    animation: block_1 3s linear forwards infinite;
+}
+/*体ブロック2の設定*/
+.block:nth-child(3){
+    top: 260px;
+    animation: block_2 3s linear forwards infinite;
+}
+/*体ブロック3の設定*/
+.block:nth-child(4){
+    top: 330px;
+    animation: block_3 3s linear forwards infinite;
+}
+
+@keyframes face_animation{
+    0%{
+        transform: translateY(0px);
+        height: 90px;
+    }
+    5%{
+        transform: translateY(70px);
+        height: 90px;
+    }
+    10%{
+        transform: translateX(-5px) translateY(80px);
+        height: 80px;
+        width: 110px;
+    }
+    15%{
+        transform: translateX(5px) translateY(60px);
+        height: 100px;
+        width: 90px;
+    }
+    20%{
+        transform: translateX(-2.5px) translateY(75px);
+        height: 85px;
+        width: 105px;
+    }
+    25%{
+        transform: translateY(70px);
+        height: 90px;
+        width: 100px;
+    }
+    30%{
+        transform: translateY(140px);
+        height: 90px;
+        width: 100px;
+    }
+    35%{
+        transform: translateX(-5px) translateY(150px);
+        height: 80px;
+        width: 110px;
+    }
+    40%{
+        transform: translateX(5px) translateY(130px);
+        height: 100px;
+        width: 90px;
+    }
+    45%{
+        transform: translateX(-2.5px) translateY(145px);
+        height: 85px;
+        width: 105px;
+    }
+    50%{
+        transform: translateY(140px);
+        height: 90px;
+        width: 100px;
+    }
+    55%{
+        transform: translateY(210px);
+        height: 90px;
+        width: 100px;
+    }
+    60%{
+        transform: translateX(-20px) translateY(250px);
+        height: 50px;
+        width: 140px;
+    }
+    65%{
+        transform: translateX(20px) translateY(-40px);
+        height: 130px;
+        width: 60px;
+    }
+    70%{
+        transform: translateX(0px) translateY(0px);
+        height: 90px;
+        width: 100px;
+    }
+    75%{
+        transform: translateY(0px);
+        height: 90px;
+        width: 100px;
+    }
+    100%{
+        transform: translateY(0px);
+        height: 90px;
+        width: 100px;
+    }
+
+}
+
+@keyframes block_1 {
+    0%{
+        transform: translateX(0px);
+    }
+    5%{
+        transform: translateX(-300px);
+    }
+    70%{
+        transform: translateX(-300px);
+    }
+    75%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes block_2 {
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(0px);
+    }
+    30%{
+        transform: translateX(-300px);
+    }
+    65%{
+        transform: translateX(-300px);
+    }
+    70%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes block_3 {
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    55%{
+        transform: translateX(-300px);
+    }
+    60%{
+        transform: translateX(-300px);
+    }
+    65%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
